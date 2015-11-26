@@ -10,7 +10,7 @@ void sol(int n, int k, int no, int fr){
 		for (i = 0; i < k; i++)if (t[i] != a[i])break;
 		if (i == k)x = ans;
 		if (ans == x + 1){
-			cout << ans << endl;
+			cout << x << endl;
 			for (i = 0; i < k; i++)cout << t[i] << " ";
 			cout << endl;
 		}
@@ -33,12 +33,12 @@ int main(){
 	int n, k;
 	cin >> n >> k;
 	int i;
-	ans = -1;
+	ans = 0;
 	x = -10;
 	for (i = 0; i < k; i++)cin >> a[i];
 	for (i = 0; i <= n; i++)c[i] = 0;
 	sol(n, k, 0, 1);
 	if (ans != x + 1){
-		cout << x + 1 << endl << "no next combination" << endl;
+		cout << x << endl << "no next combination" << endl;
 	}
 }
